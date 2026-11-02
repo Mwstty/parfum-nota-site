@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* next/font değişkenleri <html> üzerinde tanımlanır; Next.js belgelerindeki gibi `inline` ile bağlanır. */
+@theme inline {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+@theme {
+  --color-ink: #27231f;
+  --color-muted: #81766b;
+  --color-line: #e8dfd4;
+  --color-paper: #f8f5ef;
+  --color-card: #fffdf9;
+  --color-accent: #986b49;
+  --color-accent-soft: #f1e8dd;
+  --color-sand: #e9e1d4;
+
+  --color-fam-citrus: #e9c46a;
+  --color-fam-floral: #e5a5b6;
+  --color-fam-fruity: #e07a5f;
+  --color-fam-gourmand: #b07d56;
+  --color-fam-spicy: #c0553a;
+  --color-fam-aromatic: #8aa67a;
+  --color-fam-woody: #7b6247;
+  --color-fam-amber: #c98a3c;
+  --color-fam-musky: #c9bfb5;
+  --color-fam-leather: #5b4636;
+  --color-fam-aquatic: #6fa3bf;
+}
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+}
